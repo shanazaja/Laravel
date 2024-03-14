@@ -26,6 +26,7 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 //route pelanggan
 Route::get('/customer', [PelangganController::class,'indexpelanggan']); //untuk menampilkan seluruh data
 Route::get('/tambahpelanggan', [PelangganController::class,'tambahpelanggan']); //untuk menampilkan tambah data
+Route::post('/customer', [PelangganController::class,'indexpelanggan']); //untuk menampilkan tambah data
 
 
 

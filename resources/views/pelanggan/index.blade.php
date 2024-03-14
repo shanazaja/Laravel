@@ -21,19 +21,20 @@ Data Pelanggan
       </tr>
     </thead>
     <tbody>
-      @forelse ($profile as $key => $value) <tr>
+      @foreach ($profile as $key) <tr>
 
-        <th scope="row">{{$key + 1}}</th>
-        <td>{{$value->nama}}</td>
-        <td>{{ $value->alamat}}</td>
-        <td>{{ $value->jenis_kelamin}}</td>
-        <td>{{ $value->no_telephone}}</td>
+        <th scope="row">{{$loop->iteration}}</th>
+        <td>{{$key->nama}}</td>
+        <td>{{ $key->alamat}}</td>
+        <td>{{ $key->jenis_kelamin}}</td>
+        <td>{{ $key->no_telephone}}</td>
 
-        <td class="mr-3"> <a href="/customer/{{$value->id}}" class="btn btn-info">Show </a> <a
-            href="/customer/{{$value->id}}/edit" class="btn btn-success">Edit</a> <a href="/customer/ {{$value->id }}"
+        <td class="mr-3"> <a href="/customer/{{$key->id}}" class="btn btn-info">Show </a> <a
+            href="/customer/{{$key->id}}/edit" class="btn btn-success">Edit</a> <a href="/customer/ {{$key->id }}"
             class="btn btn-danger" data-confirm-delete="true">Delete</a> </td>
 </div>
 </tr> {{--tidak ada data --}}
+@endforeach
 </tbody>
 </table>
 </div>

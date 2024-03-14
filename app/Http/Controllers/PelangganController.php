@@ -12,7 +12,8 @@ class PelangganController extends Controller
     {
         $profile = DB::table('pelanggan')->get();
 
-        return view('pelanggan.index');
+
+        return view('pelanggan.index', compact('profile'));
     }
 
     public function tambahpelanggan()

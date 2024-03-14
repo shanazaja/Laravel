@@ -3,7 +3,7 @@
 @section('judul', 'Tambah Profil Pelanggan')
 
 @section('content')
-<form action="/customer" method="HEAD">
+<form action="/customer" method="POST">
     @csrf
 <div class="form-group p-3">
     <label>Nama Lengkap </label>
